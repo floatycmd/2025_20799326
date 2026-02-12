@@ -6,11 +6,12 @@ on:
       - main
 
 permissions:
-  contents: write   # 🔥 สำคัญมาก
+  contents: write
 
 jobs:
   deploy-worksheet5:
     runs-on: ubuntu-latest
+
 
     steps:
       - name: Checkout repository
