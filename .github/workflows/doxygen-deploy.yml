@@ -1,27 +1,31 @@
-name: doxygen-deploy
+name: Worksheet5: Auto deploy Doxygen to gh-pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+permissions:
+  contents: write   # 🔥 สำคัญมาก
 
 jobs:
   deploy-worksheet5:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install doxygen
-        run: sudo apt-get update && sudo apt-get install -y doxygen
+      - name: Install Doxygen
+        run: sudo apt-get install -y doxygen
 
       - name: Run Doxygen
-        working-directory: ${{ github.workspace }}/Worksheet5
-        run: doxygen
+        run: |
+          cd Worksheet5
+          doxygen Doxyfile
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          branch: gh-pages
-          folder: ${{ github.workspace }}/Worksheet5/html
-          clean: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: Worksheet5/html
