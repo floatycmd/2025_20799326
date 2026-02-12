@@ -1,0 +1,17 @@
+# Build folders
+build/
+install/
+_CPack_Packages/
+
+# Visual Studio
+*.vcxproj*
+*.sln
+*.user
+*.obj
+*.pdb
+
+# Binaries
+*.exe
+*.dll
+*.lib
+*.exp
