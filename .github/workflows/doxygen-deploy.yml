@@ -1,4 +1,4 @@
-name: Worksheet5: Auto deploy Doxygen to gh-pages
+name: Worksheet5 Auto deploy Doxygen to gh-pages
 
 on:
   push:
@@ -12,8 +12,7 @@ jobs:
   deploy-worksheet5:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
