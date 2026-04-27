@@ -1,0 +1,9 @@
+<map id="ModelPart::appendChild" name="ModelPart::appendChild">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,55,440,80"/>
+<area shape="rect" id="Node000002" href="$classModelPartList.html#ac687a2942c6e8b8b23df36c32a0deaeb" title=" " alt="" coords="11,5,210,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,54,173,33,174,28,276,49"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="12,55,209,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,70,210,70,210,65,250,65"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a3a4866823ec0a9148c03ade962e65cf3" title="Opens a file and loads a CAD model." alt="" coords="5,105,216,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="285,86,196,107,195,102,284,81"/>
+</map>
