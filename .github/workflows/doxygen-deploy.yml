@@ -13,28 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install Doxygen and Graphviz
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y doxygen graphviz
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
 
       - name: Run Doxygen
         run: doxygen Doxyfile
 
-      - name: Check generated files
+      - name: Debug html output
         run: |
+          pwd
           ls -la
           ls -la html
+          test -f html/index.html
 
       - name: Add nojekyll
         run: touch html/.nojekyll
 
-      - name: Deploy to gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: html
+          publish_branch: gh-pages
+          publish_dir: ./html
           force_orphan: true
